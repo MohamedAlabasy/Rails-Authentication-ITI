@@ -1,24 +1,27 @@
-# README
+<h1 align="center"> Rails Authentication App </h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/93389016/171129503-c70d1879-9740-4ac3-85f9-a7f0369bd467.png">  
+</p>
 
-Things you may want to cover:
+## To run this project :   
 
-* Ruby version
+`Step 1` :  
+&nbsp; &nbsp; &nbsp; &nbsp; You must have installed virtual server i.e XAMPP on your PC (for Windows). This System in Django with source code   
+&nbsp; &nbsp; &nbsp; &nbsp; is free to download, Use for educational purposes only! .  
 
-* System dependencies
+`Step 2` :  Download the source code .
+```
+git https://github.com/MohamedAlabasy/Rails-Authentication-ITI.git
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`Step 3` :  Enter the project file then ...
+```
+rails db:create
+```
+```
+rails db:migrate
+```
+```
+rails server
+```
