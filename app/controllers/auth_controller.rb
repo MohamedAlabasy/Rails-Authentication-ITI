@@ -3,6 +3,10 @@ class AuthController < ApplicationController
   end
 
   def signup
+    # get data form request
+    # validation
+    # store data in databas
+    # redirect
   end
 
   def signin_form
