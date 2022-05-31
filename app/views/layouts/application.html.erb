@@ -11,18 +11,25 @@
 
   <body>
   <ul class="nav justify-content-center">
+  <% if session[:user] %>
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
+    <%= link_to "Active", root_path ,class:"nav-link active" %>
+  </li>
+  <% end %>
+  <% unless session[:user] %>
+  <li class="nav-item">
+    <%= link_to "Login", login_path ,class:"nav-link" %>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <%= link_to "Register", registration_path,class:"nav-link" %>
   </li>
+  <% end %>
+  <% if session[:user] %>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <%= button_to "Logout",logout_path, method: :post,class:"nav-link" %>
   </li>
-  <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
-  </li>
+  <% end %>
+
 </ul>
 <div class="container my-5">
     <%= yield %>

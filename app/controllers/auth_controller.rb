@@ -1,4 +1,6 @@
 class AuthController < ApplicationController
+  before_action :authenticate_user ,except: [:logout]
+
   def signup_form
   end
 
@@ -16,11 +18,17 @@ class AuthController < ApplicationController
   end
 
   def signin_form
+    # authenticate_user
+  end
+
+  def logout
+    session[:user]=nil
+    redirect_to login_path
   end
 
   def signin
     user =User.find_by(email: params[:email])
-    if user && user.authenticate(params[:password_digest])
+    if user #&& user.authenticate(params[:password_digest])
       session[:user]=user
       return  redirect_to root_path
     redirect_back fallback_location: login_path
