@@ -6,7 +6,7 @@ class AuthController < ApplicationController
     # get data form request
     # validation
     # store data in databas
-    user=User.new(params.permit(:name ,:email ,:password))
+    user=User.new(params.permit(:name ,:email ,:password_digest))
 
     user.save
     # redirect
