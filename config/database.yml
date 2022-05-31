@@ -16,7 +16,7 @@ development:
   
 # development:
 #   <<: *default
-#   adapter: mysql
+#   adapter: mysql2
 #   database: rails_blog
 #   username: root
 #   password: 
